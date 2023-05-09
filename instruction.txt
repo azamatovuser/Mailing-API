@@ -1,0 +1,43 @@
+# Сначала установите requirement.txt - > pip install -r requirements.txt
+
+# http://127.0.0.1:8000/swagger/ - через эту ссылку можно посмотреть все API проекта
+
+
+# http://127.0.0.1:8000/client_list_create/
+# ClientListCreateAPIView
+# GET и POST к /client_list_create/. был сделан класс ClientListCreateAPIView, который отвечает за создание и просмотр списка клиентов в базе данных.
+
+
+# http://127.0.0.1:8000/client/detail/<int:pk>/
+# ClientRUDAPIView
+# GET, PUT и DELETE к /client/detail/<int:pk>/. ClientRUDAPIView отвечает за просмотр, обновление и удаление информации о конкретном клиенте в базе данных.
+
+
+# http://127.0.0.1:8000/mailing/create/
+# NewMailingView
+# POST к /mailing/create/. С помощью NewMailingView можно создать новую рассылку и сохраненить ее в базе данных.
+
+
+# http://127.0.0.1:8000/mailing/create_in_future/
+# NewFutureMailingView
+# POST к /mailing/create_in_future/. Он связывается с классом представления NewFutureMailingView, который отвечает за создание новой рассылки с заданным временем отправки и сохранение ее в базе данных.
+
+
+# http://127.0.0.1:8000/mailing/detail/<int:pk>/
+# MailingRUDAPIView
+# GET, PUT и DELETE к /mailing/detail/<int:pk>/. сделан через MailingRUDAPIView, который отвечает за просмотр, обновление и удаление информации о конкретной рассылке в базе данных.
+
+
+# http://127.0.0.1:8000/message/list/
+# MessageListAPIView
+# GET к /message/list/. MessageListAPIView, отвечает за просмотр списка всех сообщений, отправленных в рамках рассылок.
+
+
+# http://127.0.0.1:8000/message/create/
+# MessageCreateAPIView
+# POST к /message/create/. Используется MessageCreateAPIView, класс отвечает за создание нового сообщения в рамках рассылки и сохранение его в базе данных.
+
+
+# http://127.0.0.1:8000/message/detail/<int:pk>/
+# MessageRUDAPIView
+# GET, PUT и DELETE к /message/detail/<int:pk>/. Связан с MessageRUDAPIView, который отвечает за просмотр, обновление и удаление информации о конкретном сообщении в базе
