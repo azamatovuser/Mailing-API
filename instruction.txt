@@ -7,6 +7,14 @@
 # ClientListCreateAPIView
 # GET и POST к /client_list_create/. был сделан класс ClientListCreateAPIView, который отвечает за создание и просмотр списка клиентов в базе данных.
 
+# Пример как отправлять информацию
+# {
+#     "number": "53451",
+#     "code_number": "124",
+#     "tag": "423",
+#     "timezone": "2023-05-12 12:32:00"
+# }
+
 
 # http://127.0.0.1:8000/client/detail/<int:pk>/
 # ClientRUDAPIView
@@ -17,10 +25,26 @@
 # NewMailingView
 # POST к /mailing/create/. С помощью NewMailingView можно создать новую рассылку и сохраненить ее в базе данных.
 
+# Пример как отправлять информацию
+# {
+#   "start_date": "2023-05-11 12:32:00",
+#   "end_date": "2023-05-12 12:32:00",
+#   "code_filter": 4321,
+#   "message": "message"
+# }
+
 
 # http://127.0.0.1:8000/mailing/create_in_future/
 # NewFutureMailingView
 # POST к /mailing/create_in_future/. Он связывается с классом представления NewFutureMailingView, который отвечает за создание новой рассылки с заданным временем отправки и сохранение ее в базе данных.
+
+# Пример как отправлять информацию
+# {
+#   "start_date": "2023-05-11 12:32:00",
+#   "end_date": "2023-05-12 12:32:00",
+#   "code_filter": 4321,
+#   "message": "message"
+# }
 
 
 # http://127.0.0.1:8000/mailing/detail/<int:pk>/
@@ -36,6 +60,12 @@
 # http://127.0.0.1:8000/message/create/
 # MessageCreateAPIView
 # POST к /message/create/. Используется MessageCreateAPIView, класс отвечает за создание нового сообщения в рамках рассылки и сохранение его в базе данных.
+
+# Пример как отправлять информацию
+# {
+#     "start_date": "2023-05-11 12:32:00",
+#     "status": 1
+# }
 
 
 # http://127.0.0.1:8000/message/detail/<int:pk>/
